@@ -1,6 +1,6 @@
 # Regex 101
 
-In this tutorial, we'll explore how to use regular expressions (regex) to match email addresses in JavaScript. Regular expressions are powerful tools for pattern matching, and understanding them is crucial for web developers.
+In this tutorial, we'll explore how to use regular expressions (regex) to match email addresses. Regular expressions are powerful tools for search pattern in a body of text.
 
 ## Tutorial Summary
 
@@ -26,11 +26,42 @@ This regular expression ensures that user input is a valid email address. We wil
 
 ### Anchors
 
+Anchors match starting and ending points of a string or line.
+A caret or ^ can be used to match the beginning of a string and the dollar sign $ can be used to match the end of the string.
+
+<u>Example:</u>
+
+`^abc` matches "abc" only if it appears at the begginig of a the line.
+xyz$ matches "xyz" only if it appears at the end of the line.
+
 ### Quantifiers
+
+Quantifiers allow the specification of how many characters or character classes should be matched. They allow control in the repetition of patterns.
+
+`*` - this quanifier matches zero or more occurrences of whatever preceeding character or group.<br>
+`+` - this quantifier matches one or more occurances of the proceding character or group.<br>
+`?` - this quantifier matches zero or more occurances of the proceding character or group. <br><br>
+`({m,})` - this quantifier is more specific and will match m to n occurances.
+<u>Example:</u>
+<br><br>
+`a*` will match a, aa aaa and so on.<br>
+`a+` will match a, aa, aaa and so on but not an empty string.<br>
+`a?` will match a, or an empty string.<br>
+`({2,4})` will match 2, 3, 4.
 
 ### OR Operator
 
+Operator, also called alteration allows matching one of several patters. <br>
+It is defined by using the ( | ) character.
+<br><br>
+<u>Examples:</u>
+<br><br>
+patter1 | pattern2
+
 ### Character Classes
+
+Character classes distingush kinds of characters, like telling apart letters and digits.
+A character class matches any of the characters enclosed in brackets, but if a hyphen (-) appears as the first or last character enclosed in the brackets, it will be taken as a litereal hyphen and it will be included in the character class.
 
 ### Flags
 
@@ -48,5 +79,5 @@ This regular expression ensures that user input is a valid email address. We wil
 
 ## Author
 
-Nancy Ramirez - UTSA Full stack coding bookcamp student
+Nancy Ramirez - UTA Full stack coding bookcamp student
 [GitHub Profile](https://github.com/nramirez686)
